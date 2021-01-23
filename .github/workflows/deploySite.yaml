@@ -1,0 +1,28 @@
+name: Deploy SwiftGameDev
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull repo
+        uses: actions/checkout@v2
+      - name: install mkdocs
+        run: sudo apt install -y mkdocs
+      - name: Setup Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
+      - name: install material-theme for mkdocs
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs-material
+      - name: build SwiftGameDev
+        run:  mkdocs build --clean -d website
+      - name: Push repo
+        uses: s0/git-publish-subdir-action@v2.4.0
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: website
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

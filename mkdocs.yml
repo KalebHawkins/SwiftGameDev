@@ -1,0 +1,43 @@
+site_name: Swift Game Development
+site_description: A Tutorial site for Swift Game Development
+site_url: https://KalebHawkins.github.io/SwiftGameDev
+
+repo_name: SwiftGameDev
+repo_url: https://github.com/KalebHawkins/SwiftGameDev.git
+remote_branch: main
+remote_name: origin
+
+site_author: Kaleb Hawkins
+
+copyright: copyright &copy; Kaleb Hawkins. All Rights Reserved.
+
+theme: 
+  name: material
+  palette: 
+    scheme: slate
+    primary: deep orange
+    accent: lime
+
+extra_css:
+  # - stylesheets/atelier-seaside-dark.css
+  - stylesheets/atom-one-dark.css
+
+extra_javascript:
+  - javascript/highlight.pack.js
+  - javascript/config.js
+
+markdown_extensions:
+  - pymdownx.keys
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      linenums: true
+  - 'pymdownx.tasklist'
+  # - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Tutorials: 
+    - Spritekit:
+      - Your First Project: tutorials/001-FirstProject.md
+  - About: about.md

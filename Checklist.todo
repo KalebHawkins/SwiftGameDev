@@ -1,0 +1,9 @@
+SwiftGameDev:
+    ✔ Create `About` page @started(21-01-22 19:01) @done(21-01-22 19:03) @lasted(2m20s)
+    ✔ Add `About` page to `mkdocs.yml` @started(21-01-22 19:00) @done(21-01-22 19:05) @lasted(5m2s)
+    ✔ Create `Getting Started` page @done(21-01-22 21:56)
+        ✔ Gather screenshots and gifs for visual walk through @started(21-01-22 19:06) @done(21-01-22 19:32) @lasted(26m33s)
+        ✔ Write content @started(21-01-22 19:32) @done(21-01-22 21:48) @lasted(2h16m30s)
+    ✔ Create deployment github action to automatically publish the site on chages. @done(21-01-23 12:36)
+    ☐ Create a page discussing the bug found for setting the SKView programmatically.
+    ☐ Create a `Contact` page and link to github to open issues
