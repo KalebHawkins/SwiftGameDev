@@ -1,0 +1,834 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Tutorial site for Swift Game Development">
+      
+      
+      
+        <meta name="author" content="Kaleb Hawkins">
+      
+      
+        <link rel="canonical" href="https://KalebHawkins.github.io/SwiftGameDev/tutorials/001-FirstProject/">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
+    
+    
+      
+        <title>Your First Project - Swift Game Development</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ff6e42">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/atom-one-dark.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="lime">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-a-scene-using-spritekit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://KalebHawkins.github.io/SwiftGameDev" title="Swift Game Development" class="md-header-nav__button md-logo" aria-label="Swift Game Development">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Swift Game Development
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Your First Project
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/KalebHawkins/SwiftGameDev.git/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SwiftGameDev
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://KalebHawkins.github.io/SwiftGameDev" title="Swift Game Development" class="md-nav__button md-logo" aria-label="Swift Game Development">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Swift Game Development
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/KalebHawkins/SwiftGameDev.git/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SwiftGameDev
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      
+      <label class="md-nav__link" for="nav-2">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+      
+      <label class="md-nav__link" for="nav-2-1">
+        Spritekit
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Spritekit" data-md-level="2">
+        <label class="md-nav__title" for="nav-2-1">
+          <span class="md-nav__icon md-icon"></span>
+          Spritekit
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Your First Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Your First Project
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-word" class="md-nav__link">
+    Quick Word
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-project" class="md-nav__link">
+    Your First Project
+  </a>
+  
+    <nav class="md-nav" aria-label="Your First Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-xcode" class="md-nav__link">
+    Get Xcode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-project" class="md-nav__link">
+    Creating the Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-skview-class" class="md-nav__link">
+    The SKView Class
+  </a>
+  
+    <nav class="md-nav" aria-label="The SKView Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-skview" class="md-nav__link">
+    Setup SKView
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-the-code" class="md-nav__link">
+    To The Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrating-spritekit" class="md-nav__link">
+    Integrating Spritekit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-scene" class="md-nav__link">
+    Creating the Scene
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-node" class="md-nav__link">
+    Adding a Node
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#congratulations" class="md-nav__link">
+    Congratulations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges" class="md-nav__link">
+    Challenges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-word" class="md-nav__link">
+    Quick Word
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-project" class="md-nav__link">
+    Your First Project
+  </a>
+  
+    <nav class="md-nav" aria-label="Your First Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-xcode" class="md-nav__link">
+    Get Xcode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-project" class="md-nav__link">
+    Creating the Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-skview-class" class="md-nav__link">
+    The SKView Class
+  </a>
+  
+    <nav class="md-nav" aria-label="The SKView Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-skview" class="md-nav__link">
+    Setup SKView
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-the-code" class="md-nav__link">
+    To The Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrating-spritekit" class="md-nav__link">
+    Integrating Spritekit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-scene" class="md-nav__link">
+    Creating the Scene
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-node" class="md-nav__link">
+    Adding a Node
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#congratulations" class="md-nav__link">
+    Congratulations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges" class="md-nav__link">
+    Challenges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/KalebHawkins/SwiftGameDev.git/edit/master/docs/tutorials/001-FirstProject.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="creating-a-scene-using-spritekit">Creating A Scene Using Spritekit</h1>
+<p>Apple describes Spritekit as a general-purpose framework for drawing shapes, particles, text, images, and video in two dimensions. It leverages Metal to achieve high-performance rendering while offering a simple programming interface to make it easy to create games and other graphics-intensive apps. Using a rich set of animations and physics behaviors, you can quickly add life to your visual elements and gracefully transition between screens.</p>
+<h2 id="quick-word">Quick Word</h2>
+<p>Welcome to the first step in beginning your iOS game development journey. I hope this will be as much a learning experience for anyone reading this as it will be for myself. </p>
+<p>I will assume that you have some prior experience with iOS development. Below are some highly recommended references if you don't have previous experience.</p>
+<table>
+<thead>
+<tr>
+<th>Course</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/lecture/16261222?start=0#overview">Angela Yu's Udemy Course</a></td>
+<td>One of the best places to start learning iOS development. The course stays updated, is of high quality, and the teaching style is at a pace that anyone could keep up.</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=TZL5AmwuwlA&amp;list=PL3d_SFOiG7_8ofjyKzX6Nl1wZehbdiZC_">Stanford University CS193p 2017-2018</a></td>
+<td>This is an excellent resource to learn iOS development.</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=jbtqIBpUG7g&amp;list=PLpGHT1n4-mAtTj9oywMWoBx0dCGd51_yG&amp;index=14">Stanford University CS193p 2020</a></td>
+<td>This is a faster-paced course but covers things in great detail. The course focuses on SwiftUI.</td>
+</tr>
+<tr>
+<td><a href="https://www.hackingwithswift.com">Hacking With Swift</a></td>
+<td>Search anything involving Swift HackingWithSwift will appear. The content is high quality.</td>
+</tr>
+<tr>
+<td><a href="https://www.raywenderlich.com">Ray Wenderlinch</a></td>
+<td>A site much like HackingWithSwift. There is high-quality content here.</td>
+</tr>
+</tbody>
+</table>
+<p>Do not try to consume everything from every link listed above. Doing so will burn anyone out with little to no progress. The best thing to do is learn concepts and then put those concepts to practice. </p>
+<h2 id="your-first-project">Your First Project</h2>
+<p>This first project will be something simple. The goal is to draw a scene and a shape.</p>
+<p><img alt="" src="../../img/firstProject.png" /></p>
+<p>We are going to create a <code>Single View App</code> then add Spritekit to it. The process for adding Spritekit to a project is described in <a href="https://developer.apple.com/documentation/spritekit/drawing_spritekit_content_in_a_view">Apple's Developer Documentation</a> but is difficult to follow. I recommend you read the page linked after this tutorial and try to understand it. </p>
+<h3 id="get-xcode">Get Xcode</h3>
+<p>The first thing to do is ensure you have <a href="https://apps.apple.com/us/app/xcode/id497799835?mt=12">Xcode</a> downloaded and installed.</p>
+<h3 id="creating-the-project">Creating the Project</h3>
+<p>Now let's create a project. You can follow the gif below to see how to do that. </p>
+<p>The steps are as follows:<br />
+1. Open Xcode<br />
+2. Create a new project<br />
+3. Select IOS<br />
+4. Select App<br />
+5. Fill out the required fields</p>
+<p><code>Product Name: WhateverYouWant</code><br />
+<code>Team: WhatEverYouWant</code><br />
+<code>Organizational Identifier: com.whateverYouWant</code><br />
+<code>Interface: Storyboard</code><br />
+<code>Lifecycle: UIKit App Delegate</code><br />
+<code>Language: Swift</code>  </p>
+<p><img alt="" src="../../img/createProject.gif" /></p>
+<h3 id="the-skview-class">The SKView Class</h3>
+<p>In Apple's documentation, they walk you through creating a Scene, drawing a node, and finally presenting the scene. They don't explain setting up the <code>View</code> that you present. The <code>View</code> needs to be of class <code>SKView</code>. </p>
+<h4 id="setup-skview">Setup SKView</h4>
+<p>There are two ways to set the <code>View</code> as a <code>SKView</code>. The first is to go to your <code>Main.Storyboard</code> file and select the main <code>View</code> and change its class to <code>SKView</code> as seen in the images below.</p>
+<p><img alt="" src="../../img/mainStoryBoard.png" /> 
+<img alt="" src="../../img/SetUIViewClass.gif" /></p>
+<p>You can set the <code>View</code> programmatically as well. I don't recommend the programmatic approach because I've run into bugs with it.</p>
+<h3 id="to-the-code">To The Code</h3>
+<p>Navigate to the <code>ViewController.swift</code> file you will see code very similar to the following:</p>
+<p><img alt="" src="../../img/viewControllerSwift.png" /></p>
+<pre><code class="language-swift">import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+}
+</code></pre>
+<h3 id="integrating-spritekit">Integrating Spritekit</h3>
+<p>The first thing to do is integrate Spritekit into our project. Using the <code>import Spritekit</code> statement import the framework into the project.</p>
+<pre><code class="language-swift">import UIKit
+// Import Spritekit here
+import Spritekit 
+
+class ViewController: UIViewController {
+    //...
+}
+</code></pre>
+<h3 id="creating-the-scene">Creating the Scene</h3>
+<p>As explained in Apple's Developer Documentation: <em>"Everything displayed with SpriteKit is done through a scene object, which is an instance of <code>SKScene</code>."</em> To set up a <code>SKScene</code> use the following code.</p>
+<pre><code class="language-swift">import UIKit
+import Spritekit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Check the view to ensure it is of type SKView
+        if let skView = view as? SKView {
+            // Initialize a SKScene object. By passing the size of the view's bounds the scene will fit to the screen.
+            let scene = SKScene(size: skView.bounds.size)
+
+            // Present the scene
+            skView.presentScene(scene)
+        }
+    }
+}
+</code></pre>
+<h3 id="adding-a-node">Adding a Node</h3>
+<p>Compile and run your code using <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-r">R</kbd></span>. You should see an empty grey screen.</p>
+<p><img alt="" src="../../img/blankGreyScreen.png" /></p>
+<p>Ready to add something to the scene? Using <code>SKShapeNode</code> create a circle using the following code. </p>
+<pre><code class="language-swift">import UIKit
+import SpriteKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        if let skView = view as? SKView {
+            let scene = SKScene(size: skView.bounds.size)
+
+            // Set the scene's anchor point to the center of the screen. 
+            scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+
+            // Create an SKShapeNode with a circleOfRadius of 25
+            let roundThing = SKShapeNode(circleOfRadius: 25)
+            // Set the fill color of the SKShapeNode to red
+            roundThing.fillColor = .red
+            // Add the SKShapeNode to the scene.
+            scene.addChild(roundThing)
+
+            skView.presentScene(scene)
+        }
+    }
+}
+</code></pre>
+<h2 id="congratulations">Congratulations</h2>
+<p>You have completed the first project. You have something to show! Getting this far takes a lot of work. You are already miles ahead of anyone else that said "<em>I want to make games</em>" and never put in the effort.<br />
+Here are some exercises I recommend trying. Remember, documentation and Google are tools. Utilize them. There is no shame in it. It is counterproductive to bang your head against a wall figuring out how to do something when you can look it up in seconds. The references will help guide you through the exercises.</p>
+<h2 id="challenges">Challenges</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Change the color of the circle</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Change the border color of the circle</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Change the background color of the scene</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Add a square shape to the scene</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Change the position of the shapes</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://developer.apple.com/documentation/spritekit/skview">SKView Documentation</a></li>
+<li><a href="https://developer.apple.com/documentation/spritekit/skscene">SKScene Documentation</a></li>
+<li><a href="https://developer.apple.com/documentation/spritekit/skshapenode">SKShapeNode Documentation</a></li>
+<li><a href="https://www.google.com/">Contains All Answers to the Exercises</a></li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../.." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../about/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                About
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            copyright &copy; Kaleb Hawkins. All Rights Reserved.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../javascript/highlight.pack.js"></script>
+      
+        <script src="../../javascript/config.js"></script>
+      
+    
+  </body>
+</html>
