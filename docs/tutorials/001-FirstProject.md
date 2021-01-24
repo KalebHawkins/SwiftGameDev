@@ -162,6 +162,8 @@ Here are some exercises I recommend trying. Remember, documentation and Google a
 - [ ] Add a square shape to the scene
 - [ ] Change the position of the shapes
 
+*Solutions Coming Soon*
+
 ## References 
 
 - [SKView Documentation](https://developer.apple.com/documentation/spritekit/skview)

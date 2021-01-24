@@ -40,4 +40,5 @@ nav:
   - Tutorials: 
     - Spritekit:
       - Your First Project: tutorials/001-FirstProject.md
+      - The SKScene Class: tutorials/002-TheSKScene.md
   - About: about.md
