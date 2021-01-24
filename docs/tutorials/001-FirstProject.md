@@ -1,4 +1,4 @@
-# Creating A Scene Using Spritekit
+# Getting Started
 
 Apple describes Spritekit as a general-purpose framework for drawing shapes, particles, text, images, and video in two dimensions. It leverages Metal to achieve high-performance rendering while offering a simple programming interface to make it easy to create games and other graphics-intensive apps. Using a rich set of animations and physics behaviors, you can quickly add life to your visual elements and gracefully transition between screens.
 
@@ -16,6 +16,7 @@ I will assume that you have some prior experience with iOS development. Below ar
 | [Ray Wenderlinch](https://www.raywenderlich.com) | A site much like HackingWithSwift. There is high-quality content here.
 
 Do not try to consume everything from every link listed above. Doing so will burn anyone out with little to no progress. The best thing to do is learn concepts and then put those concepts to practice. 
+
 ## Your First Project
 
 This first project will be something simple. The goal is to draw a scene and a shape.
