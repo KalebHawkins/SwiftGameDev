@@ -13,14 +13,14 @@
         <meta name="author" content="Kaleb Hawkins">
       
       
-        <link rel="canonical" href="https://KalebHawkins.github.io/SwiftGameDev/tutorials/001-FirstProject/">
+        <link rel="canonical" href="https://KalebHawkins.github.io/SwiftGameDev/tutorials/002-TheSKScene/">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
     
     
       
-        <title>Your First Project - Swift Game Development</title>
+        <title>The SKScene Class - Swift Game Development</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-a-scene-using-spritekit" class="md-skip">
+        <a href="#the-skscene-class" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Your First Project
+              The SKScene Class
             
           </span>
         </div>
@@ -271,6 +271,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../001-FirstProject/" class="md-nav__link">
+        Your First Project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -282,12 +294,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Your First Project
+          The SKScene Class
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Your First Project
+        The SKScene Class
       </a>
       
         
@@ -304,84 +316,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quick-word" class="md-nav__link">
-    Quick Word
+  <a href="#creating-a-scene-file" class="md-nav__link">
+    Creating a Scene File
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#your-first-project" class="md-nav__link">
-    Your First Project
-  </a>
-  
-    <nav class="md-nav" aria-label="Your First Project">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-xcode" class="md-nav__link">
-    Get Xcode
+  <a href="#modifying-the-scene" class="md-nav__link">
+    Modifying the Scene
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-the-project" class="md-nav__link">
-    Creating the Project
+      
+        <li class="md-nav__item">
+  <a href="#linking-the-scene" class="md-nav__link">
+    Linking the Scene
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#the-skview-class" class="md-nav__link">
-    The SKView Class
-  </a>
-  
-    <nav class="md-nav" aria-label="The SKView Class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup-skview" class="md-nav__link">
-    Setup SKView
+      
+        <li class="md-nav__item">
+  <a href="#adding-sprites-to-the-scene" class="md-nav__link">
+    Adding Sprite's to the Scene
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-the-code" class="md-nav__link">
-    To The Code
+      
+        <li class="md-nav__item">
+  <a href="#the-scenes-node-tree" class="md-nav__link">
+    The Scene's Node Tree
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integrating-spritekit" class="md-nav__link">
-    Integrating Spritekit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-the-scene" class="md-nav__link">
-    Creating the Scene
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adding-a-node" class="md-nav__link">
-    Adding a Node
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -393,8 +358,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#challenges" class="md-nav__link">
-    Challenges
+  <a href="#exercises" class="md-nav__link">
+    Exercises
   </a>
   
 </li>
@@ -410,18 +375,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../002-TheSKScene/" class="md-nav__link">
-        The SKScene Class
-      </a>
     </li>
   
 
@@ -479,84 +432,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quick-word" class="md-nav__link">
-    Quick Word
+  <a href="#creating-a-scene-file" class="md-nav__link">
+    Creating a Scene File
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#your-first-project" class="md-nav__link">
-    Your First Project
-  </a>
-  
-    <nav class="md-nav" aria-label="Your First Project">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-xcode" class="md-nav__link">
-    Get Xcode
+  <a href="#modifying-the-scene" class="md-nav__link">
+    Modifying the Scene
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-the-project" class="md-nav__link">
-    Creating the Project
+      
+        <li class="md-nav__item">
+  <a href="#linking-the-scene" class="md-nav__link">
+    Linking the Scene
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#the-skview-class" class="md-nav__link">
-    The SKView Class
-  </a>
-  
-    <nav class="md-nav" aria-label="The SKView Class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup-skview" class="md-nav__link">
-    Setup SKView
+      
+        <li class="md-nav__item">
+  <a href="#adding-sprites-to-the-scene" class="md-nav__link">
+    Adding Sprite's to the Scene
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-the-code" class="md-nav__link">
-    To The Code
+      
+        <li class="md-nav__item">
+  <a href="#the-scenes-node-tree" class="md-nav__link">
+    The Scene's Node Tree
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integrating-spritekit" class="md-nav__link">
-    Integrating Spritekit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-the-scene" class="md-nav__link">
-    Creating the Scene
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adding-a-node" class="md-nav__link">
-    Adding a Node
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -568,8 +474,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#challenges" class="md-nav__link">
-    Challenges
+  <a href="#exercises" class="md-nav__link">
+    Exercises
   </a>
   
 </li>
@@ -593,123 +499,35 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/KalebHawkins/SwiftGameDev.git/edit/master/docs/tutorials/001-FirstProject.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/KalebHawkins/SwiftGameDev.git/edit/master/docs/tutorials/002-TheSKScene.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="creating-a-scene-using-spritekit">Creating A Scene Using Spritekit</h1>
-<p>Apple describes Spritekit as a general-purpose framework for drawing shapes, particles, text, images, and video in two dimensions. It leverages Metal to achieve high-performance rendering while offering a simple programming interface to make it easy to create games and other graphics-intensive apps. Using a rich set of animations and physics behaviors, you can quickly add life to your visual elements and gracefully transition between screens.</p>
-<h2 id="quick-word">Quick Word</h2>
-<p>Welcome to the first step in beginning your iOS game development journey. I hope this will be as much a learning experience for anyone reading this as it will be for myself. </p>
-<p>I will assume that you have some prior experience with iOS development. Below are some highly recommended references if you don't have previous experience.</p>
-<table>
-<thead>
-<tr>
-<th>Course</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://www.udemy.com/course/ios-13-app-development-bootcamp/learn/lecture/16261222?start=0#overview">Angela Yu's Udemy Course</a></td>
-<td>One of the best places to start learning iOS development. The course stays updated, is of high quality, and the teaching style is at a pace that anyone could keep up.</td>
-</tr>
-<tr>
-<td><a href="https://www.youtube.com/watch?v=TZL5AmwuwlA&amp;list=PL3d_SFOiG7_8ofjyKzX6Nl1wZehbdiZC_">Stanford University CS193p 2017-2018</a></td>
-<td>This is an excellent resource to learn iOS development.</td>
-</tr>
-<tr>
-<td><a href="https://www.youtube.com/watch?v=jbtqIBpUG7g&amp;list=PLpGHT1n4-mAtTj9oywMWoBx0dCGd51_yG&amp;index=14">Stanford University CS193p 2020</a></td>
-<td>This is a faster-paced course but covers things in great detail. The course focuses on SwiftUI.</td>
-</tr>
-<tr>
-<td><a href="https://www.hackingwithswift.com">Hacking With Swift</a></td>
-<td>Search anything involving Swift HackingWithSwift will appear. The content is high quality.</td>
-</tr>
-<tr>
-<td><a href="https://www.raywenderlich.com">Ray Wenderlinch</a></td>
-<td>A site much like HackingWithSwift. There is high-quality content here.</td>
-</tr>
-</tbody>
-</table>
-<p>Do not try to consume everything from every link listed above. Doing so will burn anyone out with little to no progress. The best thing to do is learn concepts and then put those concepts to practice. </p>
-<h2 id="your-first-project">Your First Project</h2>
-<p>This first project will be something simple. The goal is to draw a scene and a shape.</p>
-<p><img alt="" src="../../img/firstProject.png" /></p>
-<p>We are going to create a <code>Single View App</code> then add Spritekit to it. The process for adding Spritekit to a project is described in <a href="https://developer.apple.com/documentation/spritekit/drawing_spritekit_content_in_a_view">Apple's Developer Documentation</a> but is difficult to follow. I recommend you read the page linked after this tutorial and try to understand it. </p>
-<h3 id="get-xcode">Get Xcode</h3>
-<p>The first thing to do is ensure you have <a href="https://apps.apple.com/us/app/xcode/id497799835?mt=12">Xcode</a> downloaded and installed.</p>
-<h3 id="creating-the-project">Creating the Project</h3>
-<p>Now let's create a project. You can follow the gif below to see how to do that. </p>
-<p>The steps are as follows:<br />
-1. Open Xcode<br />
-2. Create a new project<br />
-3. Select IOS<br />
-4. Select App<br />
-5. Fill out the required fields</p>
-<p><code>Product Name: WhateverYouWant</code><br />
-<code>Team: WhatEverYouWant</code><br />
-<code>Organizational Identifier: com.whateverYouWant</code><br />
-<code>Interface: Storyboard</code><br />
-<code>Lifecycle: UIKit App Delegate</code><br />
-<code>Language: Swift</code>  </p>
+                <h1 id="the-skscene-class">The SKScene Class</h1>
+<p>A <code>SKScene</code> object represents a scene of content in Spritekit. A scene is the <code>root</code> node in a <code>tree</code> of Spritekit nodes (<code>SKNodes</code>). The nodes provide content that the scene animates and renders for display. </p>
+<p><code>SKScene</code> is a subclass of <code>SKEffectNode</code> and enables certain effect to apply to the entire scene. Enabling effects across an entire scene may be an expensive operation so use this cautiously. </p>
+<h2 id="creating-a-scene-file">Creating a Scene File</h2>
+<p>In the <a href="../001-FirstProject/">last tutorial</a> a <code>SKScene</code> was created programmatically. This time the <code>SKScene</code> will be created from an <code>.sks</code> scene file. </p>
+<p>Step 1. Start by creating a new <code>Single App View</code> project as done in the previous tutorial. </p>
 <p><img alt="" src="../../img/createProject.gif" /></p>
-<h3 id="the-skview-class">The SKView Class</h3>
-<p>In Apple's documentation, they walk you through creating a Scene, drawing a node, and finally presenting the scene. They don't explain setting up the <code>View</code> that you present. The <code>View</code> needs to be of class <code>SKView</code>. </p>
-<h4 id="setup-skview">Setup SKView</h4>
-<p>There are two ways to set the <code>View</code> as a <code>SKView</code>. The first is to go to your <code>Main.Storyboard</code> file and select the main <code>View</code> and change its class to <code>SKView</code> as seen in the images below.</p>
-<p><img alt="" src="../../img/mainStoryBoard.png" /> 
-<img alt="" src="../../img/SetUIViewClass.gif" /></p>
-<p>You can set the <code>View</code> programmatically as well. I don't recommend the programmatic approach because I've run into bugs with it.</p>
-<h3 id="to-the-code">To The Code</h3>
-<p>Navigate to the <code>ViewController.swift</code> file you will see code very similar to the following:</p>
+<p>Step 2. Set the UIView to use the SKView class in the <code>Main.Storyboard</code> file. </p>
+<p><img alt="" src="../../img/SetUIViewClass.gif" /></p>
+<p>Step 3. Import Spritekit into your project using the <code>import Spritekit</code> statement within the <code>ViewController.swift</code> file. </p>
 <p><img alt="" src="../../img/viewControllerSwift.png" /></p>
 <pre><code class="language-swift">import UIKit
-
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-}
-</code></pre>
-<h3 id="integrating-spritekit">Integrating Spritekit</h3>
-<p>The first thing to do is integrate Spritekit into our project. Using the <code>import Spritekit</code> statement import the framework into the project.</p>
-<pre><code class="language-swift">import UIKit
-// Import Spritekit here
-import Spritekit 
-
-class ViewController: UIViewController {
-    //...
-}
-</code></pre>
-<h3 id="creating-the-scene">Creating the Scene</h3>
-<p>As explained in Apple's Developer Documentation: <em>"Everything displayed with SpriteKit is done through a scene object, which is an instance of <code>SKScene</code>."</em> To set up a <code>SKScene</code> use the following code.</p>
-<pre><code class="language-swift">import UIKit
 import Spritekit
-
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Check the view to ensure it is of type SKView
-        if let skView = view as? SKView {
-            // Initialize a SKScene object. By passing the size of the view's bounds the scene will fit to the screen.
-            let scene = SKScene(size: skView.bounds.size)
-
-            // Present the scene
-            skView.presentScene(scene)
-        }
-    }
-}
+//...
 </code></pre>
-<h3 id="adding-a-node">Adding a Node</h3>
-<p>Compile and run your code using <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-r">R</kbd></span>. You should see an empty grey screen.</p>
-<p><img alt="" src="../../img/blankGreyScreen.png" /></p>
-<p>Ready to add something to the scene? Using <code>SKShapeNode</code> create a circle using the following code. </p>
+<p>To create a <code>.sks</code> scene file press <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-n">N</kbd></span> enter scene in the filter and select <code>Spritekit Scene</code>. Careful not to select <code>Scenekit Scene</code>. </p>
+<p><img alt="" src="../../img/createNewSKSFile.gif" /></p>
+<p>This will put you in Xcode's scene editor. This is where base scene configuration should take place when possible.<br />
+<img alt="" src="../../img/newSKSFile.png" /></p>
+<h2 id="modifying-the-scene">Modifying the Scene</h2>
+<p>It is faster to edit the base scene from the editor and it cuts down on code pollution in the source files. Take some time to explore the editor. Get a feel for what you can do with your scene. For example changing the background color can be done by clicking the <code>Attributes Inspector</code> and selecting the color your the <code>color</code> attributes.</p>
+<p><img alt="" src="../../img/changeSKSceneBgColor.gif" /></p>
+<h2 id="linking-the-scene">Linking the Scene</h2>
+<p>Now to link the file up to the code. Navigate back to the <code>ViewController.swift</code> file and use the following code.</p>
 <pre><code class="language-swift">import UIKit
 import SpriteKit
 
@@ -719,40 +537,68 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         if let skView = view as? SKView {
-            let scene = SKScene(size: skView.bounds.size)
+            // Use the SKScene(fileName:) function to load the scene.
+            // The string &quot;MyScene&quot; comes from the name of the sks file.
+            // So if the name of the file was Level01.sks you would replace &quot;MyScene&quot; with &quot;Level01&quot;
+            let scene = SKScene(fileNamed: &quot;MyScene&quot;)
 
-            // Set the scene's anchor point to the center of the screen. 
-            scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-
-            // Create an SKShapeNode with a circleOfRadius of 25
-            let roundThing = SKShapeNode(circleOfRadius: 25)
-            // Set the fill color of the SKShapeNode to red
-            roundThing.fillColor = .red
-            // Add the SKShapeNode to the scene.
-            scene.addChild(roundThing)
-
+            // Present the scene
             skView.presentScene(scene)
         }
     }
 }
 </code></pre>
+<p>The code above looks almost identical to the code in the previous tutorial. The exception is the <code>SKScene</code> function is initialized with the filename of the <code>.sks</code> file. </p>
+<p>Hitting the <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-r">R</kbd></span> keys will compile and run your code. This time the background should be the same color chosen from the <code>attributes</code> tab in the <code>.sks</code> file. It may take a few seconds to load up the first time it is ran so be patient. It should not take longer the a minute.</p>
+<p><img alt="" src="../../img/greenScene.png" /></p>
+<h2 id="adding-sprites-to-the-scene">Adding Sprite's to the Scene</h2>
+<p>You can can sprites and nodes to the scene using the editor as well. Back in the <code>.sks</code> file click the <code>+</code> button in the upper right hand corner of the scene editor. </p>
+<p><img alt="" src="../../img/newSKNode.png" />
+<img alt="" src="../../img/addSpriteNodes.gif" /></p>
+<p>Watch the above animation carefully and notice that when the <code>Circle Sprite</code> is placed it has a square shape. The reason for this is explained in a later tutorial. </p>
+<p>Notice also that the context of the attributes editor changes when selecting a node. This allows for different aspects of the node to be modified. </p>
+<h2 id="the-scenes-node-tree">The Scene's Node Tree</h2>
+<p>When building the scene you want to keep nodes organized in larger projects. The editor allows you to visualize your nodes in a tree-like structure. Nodes can be nested and organized. When a node is nested below another node it becomes a <code>child</code> or it's <code>parent</code> node. Things like inheritance for certain attributes take place unless overridden by the child node. These are important concepts to keep in mind. </p>
+<p><img alt="" src="../../img/nodeTree.png" /></p>
 <h2 id="congratulations">Congratulations</h2>
-<p>You have completed the first project. You have something to show! Getting this far takes a lot of work. You are already miles ahead of anyone else that said "<em>I want to make games</em>" and never put in the effort.<br />
-Here are some exercises I recommend trying. Remember, documentation and Google are tools. Utilize them. There is no shame in it. It is counterproductive to bang your head against a wall figuring out how to do something when you can look it up in seconds. The references will help guide you through the exercises.</p>
-<h2 id="challenges">Challenges</h2>
+<p>You made it through another tutorial. I hope you have a good understanding of SKScenes and how to change a scene's attribute, add nodes, and change attributes of those nodes. There are many things you can do with the <code>SKScene</code> object:</p>
+<ul>
+<li>Stretch the Content to Fit the View</li>
+<li>Configure the ViewPort (Define what part of the scene is visible at a given time)</li>
+<li>Respond to loading and resizing events</li>
+<li>Respond to Frame-Cycle events</li>
+<li>Delegating a scene</li>
+<li>Change background appearance </li>
+<li>Configure Physics</li>
+<li>Add positional audio</li>
+</ul>
+<p>Note that a <code>SKScene</code> inherits from the <code>SKEffectNode</code>. That means anything that can be done with the <code>SKEffectNode</code> can be performed on a <code>SKScene</code>. These action can include:</p>
+<ul>
+<li>Apply Core Image Filters</li>
+<li>Warping Nodes</li>
+<li>Applying Shaders</li>
+<li>Flatten Node Tree's for improved performance</li>
+<li>Configure Alpha blending</li>
+</ul>
+<p>In the next tutorial we will be adding some movement to a <code>SKShapeNode</code>. </p>
+<h2 id="exercises">Exercises</h2>
+<p>These exercises may seem a bit dull but they are beneficial. Don't try to memorize everything. The documentation is there for a reference when needed. Do put what you learn to practice while learning it. This will re-enforce the concepts. The same principle applies for learning any skill. </p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled/> Change the color of the circle</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Change the border color of the circle</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Change the background color of the scene</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Add a square shape to the scene</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Change the position of the shapes</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Create a new scene with a different background color</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Read the <code>SKScene</code> Documentation (see the <a href="#references">References</a>)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Change the Scenes <code>origin</code></li>
+<li class="task-list-item"><input type="checkbox" disabled/> Set the position of a node using the editor</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Try to configure physics (you will need a node with a <code>physicsbody</code>)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Understand the <code>sceneDidLoad()</code>, <code>didChangeSize(CGSize:)</code>,  <code>willMove(from: SKView)</code>, <code>didMove(to: SKView)</code> functions and how/when to use them</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Review the <code>Conforms To</code> and <code>Essentials</code> section of <code>SKScene</code> documentation</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Bonus points for getting audio to work</li>
 </ul>
 <p><em>Solutions Coming Soon</em></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://developer.apple.com/documentation/spritekit/skview">SKView Documentation</a></li>
 <li><a href="https://developer.apple.com/documentation/spritekit/skscene">SKScene Documentation</a></li>
-<li><a href="https://developer.apple.com/documentation/spritekit/skshapenode">SKShapeNode Documentation</a></li>
+<li><a href="https://developer.apple.com/documentation/spritekit/skscene/positioning_a_scene_s_origin_within_its_view">SKScene Origin</a></li>
+<li><a href="https://developer.apple.com/documentation/spritekit/skscene/creating_a_scene_from_a_file">Creating a SKScene from File</a></li>
 <li><a href="https://www.google.com/">Contains All Answers to the Exercises</a></li>
 </ul>
                 
@@ -773,7 +619,7 @@ Here are some exercises I recommend trying. Remember, documentation and Google a
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../.." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../001-FirstProject/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -782,19 +628,19 @@ Here are some exercises I recommend trying. Remember, documentation and Google a
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Your First Project
               </div>
             </div>
           </a>
         
         
-          <a href="../002-TheSKScene/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../about/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                The SKScene Class
+                About
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
