@@ -19,7 +19,7 @@ jobs:
           pip install mkdocs-material
       - name: build SwiftGameDev
         run:  mkdocs build --clean -d website
-      - name: Push repo
+      - name: Push to gh-pages branch
         uses: s0/git-publish-subdir-action@v2.4.0
         env:
           REPO: self
