@@ -125,6 +125,8 @@ These exercises may seem a bit dull but they are beneficial. Don't try to memori
 - [ ] Review the `Conforms To` and `Essentials` section of `SKScene` documentation
 - [ ] Bonus points for getting audio to work
 
+Make it through all of the excersises and still don't understand something? That is OK. Understanding comes with time. Future tutorials will cover each of these items in greater detail.
+
 *Solutions Coming Soon*
 
 ## References
@@ -133,3 +135,9 @@ These exercises may seem a bit dull but they are beneficial. Don't try to memori
 - [SKScene Origin](https://developer.apple.com/documentation/spritekit/skscene/positioning_a_scene_s_origin_within_its_view)
 - [Creating a SKScene from File](https://developer.apple.com/documentation/spritekit/skscene/creating_a_scene_from_a_file)
 - [Contains All Answers to the Exercises](https://www.google.com/)
+
+## Extra Reading
+
+The first link below is the documentation explaining different nodes and node types. It is recommended you at least read over the section `Using Base Nodes to Lay Out SpriteKit Content` and `Maximizing Node Drawing Performance` to get a general idea of the capabilities of different nodes.
+
+- [Nodes for Scene Building](https://developer.apple.com/documentation/spritekit/nodes_for_scene_building#2242745)
