@@ -3,7 +3,7 @@ site_description: A Tutorial site for Swift Game Development
 site_url: https://KalebHawkins.github.io/SwiftGameDev
 
 repo_name: SwiftGameDev
-repo_url: https://github.com/KalebHawkins/SwiftGameDev.git
+repo_url: https://github.com/KalebHawkins/SwiftGameDev
 remote_branch: main
 remote_name: origin
 
