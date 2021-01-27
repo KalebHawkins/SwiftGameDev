@@ -7,6 +7,7 @@ SwiftGameDev:
     ✔ Create deployment github action to automatically publish the site on chages. @done(21-01-23 12:36)
     ✔ Create a page discussing the SKScene class. @started(21-01-23 18:27) @done(21-01-23 20:38) @lasted(2h11m4s)
     ☐ Create page for moving nodes
+    ☐ Create a page discussing `SKView` and `SKTransition` 
     ☐ Create a page for setting up physics
     Extra Content:
         ☐ Create solutions for the content.
