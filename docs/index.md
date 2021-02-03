@@ -1,8 +1,10 @@
 # Welcome Swift Game Dev
 ---
 
-This site aims to teach you about iOS game development with swift through the use of bite-sized tutorials.
+Welcome to Swift Game Dev! This site aims to teach a wide array of game development topics in the iOS game ecosystem. 
 
-All tutorials can be found [here](tutorials/index.md).
+To get started goto the tutorials section in the left-hand menu and select the framework of interest. 
+
+
 
 ***Under Construction.***

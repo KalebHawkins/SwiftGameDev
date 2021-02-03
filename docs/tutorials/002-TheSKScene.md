@@ -36,7 +36,7 @@ This will put you in Xcode's scene editor. This is where base scene configuratio
 
 ## Modifying the Scene
 
-It is faster to edit the base scene from the editor and it cuts down on code pollution in the source files. Take some time to explore the editor. Get a feel for what you can do with your scene. For example changing the background color can be done by clicking the `Attributes Inspector` and selecting the color your the `color` attributes.
+It is faster to edit the base scene from the editor and it cuts down on code pollution in the source files. Take some time to explore and get a feel for what can be done with the editor. For example changing the background color can be done by clicking the `Attributes Inspector` and selecting the color your the `color` attributes.
 
 ![](../img/changeSKSceneBgColor.gif)
 
@@ -125,7 +125,7 @@ These exercises may seem a bit dull but they are beneficial. Don't try to memori
 - [ ] Review the `Conforms To` and `Essentials` section of `SKScene` documentation
 - [ ] Bonus points for getting audio to work
 
-Make it through all of the excersises and still don't understand something? That is OK. Understanding comes with time. Future tutorials will cover each of these items in greater detail.
+Make it through all of the exercises and still don't understand something? That is OK. Understanding comes with time. Future tutorials will cover each of these items in greater detail.
 
 *Solutions Coming Soon*
 

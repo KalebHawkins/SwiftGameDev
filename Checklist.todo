@@ -6,7 +6,11 @@ SwiftGameDev:
         ✔ Write content @started(21-01-22 19:32) @done(21-01-22 21:48) @lasted(2h16m30s)
     ✔ Create deployment github action to automatically publish the site on changes. @done(21-01-23 12:36)
     ✔ Create a page discussing the SKScene class. @started(21-01-23 18:27) @done(21-01-23 20:38) @lasted(2h11m4s)
-    ☐ Create page for moving nodes
+    ☐ Create page for moving nodes 
+        started(21-01-27 19:08) done(21-01-27 21:12) lasted(2h4m12s) 
+        started(21-01-28 22:00) done(21-01-28 23:28) lasted(1h28m50s)
+        ☐ Get gif of different animation sequences. @today
+    ☐ Add more discussion around the `SKScene` class and important functions
     ☐ Create a page discussing `SKView` and `SKTransition` 
     ☐ Create a page for setting up physics
     Extra Content:
