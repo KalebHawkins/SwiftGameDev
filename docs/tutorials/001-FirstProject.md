@@ -270,7 +270,6 @@ Here are some challenges. Remember when doing these exercises that documentation
 - [SKView Documentation](https://developer.apple.com/documentation/spritekit/skview)
 - [SKScene Documentation](https://developer.apple.com/documentation/spritekit/skscene)
 - [SKShapeNode Documentation](https://developer.apple.com/documentation/spritekit/skshapenode)
-- [Google](https://www.google.com/)
 - [SKScene Origin](https://developer.apple.com/documentation/spritekit/skscene/positioning_a_scene_s_origin_within_its_view)
 - [Creating a SKScene from File](https://developer.apple.com/documentation/spritekit/skscene/creating_a_scene_from_a_file)
 - [Google](https://www.google.com/)
