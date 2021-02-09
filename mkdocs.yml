@@ -33,13 +33,13 @@ markdown_extensions:
   - pymdownx.highlight:
       linenums: true
   - 'pymdownx.tasklist'
-  # - pymdownx.superfences
+  - pymdownx.superfences
 
 nav:
   - Home: index.md
   - Tutorials: 
     - Spritekit:
+      - Before You Begin: tutorials/000-Preparations.md
       - Your First Project: tutorials/001-FirstProject.md
-      - The SKScene Class: tutorials/002-TheSKScene.md
-      - Moving Nodes: tutorials/003-MovingNodes.md
+      - Moving Nodes: tutorials/002-MovingNodes.md
   - About: about.md
