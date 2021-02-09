@@ -10,10 +10,4 @@ SwiftGameDev:
         started(21-01-27 19:08) done(21-01-27 21:12) lasted(2h4m12s) 
         started(21-01-28 22:00) done(21-01-28 23:28) lasted(1h28m50s)
         ✔ Get gif of different animation sequences. @done(21-02-03 10:29)
-    ☐ Add more discussion around the `SKScene` class and important functions
-    ☐ Create a page discussing `SKView` and `SKTransition` 
     ☐ Create a page for setting up physics
-    Extra Content:
-        ☐ Create solutions for the content.
-        ☐ Create a page discussing the bug found for setting the SKView programmatically.
-        ☐ Create a `Contact` page and link to github to open issues
