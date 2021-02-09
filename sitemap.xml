@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://KalebHawkins.github.io/SwiftGameDev/</loc>
-     <lastmod>2021-02-03</lastmod>
+     <lastmod>2021-02-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://KalebHawkins.github.io/SwiftGameDev/tutorials/000-Preparations/</loc>
+     <lastmod>2021-02-09</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://KalebHawkins.github.io/SwiftGameDev/tutorials/001-FirstProject/</loc>
-     <lastmod>2021-02-03</lastmod>
+     <lastmod>2021-02-09</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://KalebHawkins.github.io/SwiftGameDev/tutorials/002-TheSKScene/</loc>
-     <lastmod>2021-02-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://KalebHawkins.github.io/SwiftGameDev/tutorials/003-MovingNodes/</loc>
-     <lastmod>2021-02-03</lastmod>
+     <loc>https://KalebHawkins.github.io/SwiftGameDev/tutorials/002-MovingNodes/</loc>
+     <lastmod>2021-02-09</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://KalebHawkins.github.io/SwiftGameDev/about/</loc>
-     <lastmod>2021-02-03</lastmod>
+     <lastmod>2021-02-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
